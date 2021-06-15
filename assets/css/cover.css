@@ -1,0 +1,220 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/*
+Model CSS here start ---
+*/
+
+#blackwall {
+position: fixed;
+overflow: auto;
+text-align: center;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: 100;
+background-color: rgba(255, 255, 255, .65);
+width: 100%;
+padding: 0;
+margin: 0;
+border: 0;
+display: none;
+}
+
+#blackwall:before {
+content: '';
+display: inline-block;
+height: 30%;
+vertical-align: middle;
+margin-right: -.25em;
+}
+
+#dmodal {
+position: relative;
+background-color: #fff;
+padding: 50px 0 30px;
+border-radius: 3px;
+box-shadow: 0 4px 14px 0 rgba(0, 0, 0, .3);
+display: inline-block;
+vertical-align: middle;
+outline: 0;
+overflow: hidden;
+max-width: 580px;
+z-index: 1000;
+transition: all 0.5s ease;
+transform: scale(0, 0);
+}
+
+.dmodal-header {
+z-index: 10;
+font-size: 32px;
+letter-spacing: 0;
+font-weight: 300;
+font-style: normal;
+width: 100%;
+padding: 10px 20px;
+position: absolute;
+top: 0;
+background: #fff;
+color: black;
+border-width: 0;
+}
+
+.dmodal-header div {
+margin: 0;
+font-size: 32px;
+color: black;
+padding: 10px 20px;
+}
+
+.button-close {
+font-size: 32px;
+letter-spacing: 0;
+font-weight: 300;
+font-style: normal;
+padding: 10px 20px;
+position: absolute;
+top: 0;
+right: 0;
+background: rgba(0, 0, 0, 0);
+border-width: 0;
+z-index: 100;
+}
+
+.button-close:hover,
+.button-close:focus {
+color: #000;
+cursor: pointer;
+filter: alpha(opacity=50);
+opacity: .5;
+text-decoration: none;
+}
+
+.button-scale {
+transform: scale(0);
+transition-property: transform;
+transition-duration: .1s
+}
+
+.dmodal-body {
+font-family: arial;
+box-sizing: border-box;
+padding: 5px 15px;
+color: #333;
+text-align: justify;
+}
+
+.blockScroll {
+overflow-y: hidden;
+}
+
+
+
+.content_simple {
+color: #837978; 
+}
+
+.content_simple h1 {
+font-size: 29px;
+font-weight: bold;
+text-align: center;
+line-height: 39px;
+}
+
+.content_simple h2 {
+font-family: 'ProximaNova-Regular', sans-serif;
+font-size: 24px;
+padding: 0px 0px 5px;
+font-weight: bold;
+font-weight: 100;
+color: #888;
+}
+
+
+.content_simple p,
+.content_simple div p {
+color: #6a7071;
+font-family: 'ProximaNova-Thin', sans-serif;
+font-size: 18px;
+line-height: 27px;
+margin-top: 5px;
+font-weight: 600;
+line-height: 30px;
+text-align: justify;
+}
+
+
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+#secondary ul li{
+	list-style-type:none;
+}
+
+#secondary ul li a{
+	text-decoration:none;
+}
+
+

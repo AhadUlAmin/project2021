@@ -1,0 +1,29 @@
+RewriteEngine On
+# For enable index
+RewriteRule ^index\.php$ - [L] 
+# For enable index
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9_.-]+)$ index.php?publisher=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_-]+)$ index.php?publisher=$1&page=$2
+RewriteRule ^([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?publisher=$1&page=$2&news=$3
+
+RewriteRule ^([a-zA-Z0-9-_+]+)$ index.php?community=$1
+RewriteRule ^([a-zA-Z0-9-_+]+)/([a-zA-Z0-9_-]+)$ index.php?community=$1&btwo=$2
+RewriteRule ^([a-zA-Z0-9-_+]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?community=$1&btwo=$2&ctwo=$3
+
+RewriteRule ^@([a-zA-Z0-9_.-]+)$ index.php?user=$1 [QSA,L]
+RewriteRule ^@([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_-]+)$ index.php?user=$1&bone=$2
+RewriteRule ^@([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?user=$1&bone=$2&cone=$3
+
+RewriteRule ^~([a-zA-Z0-9_.-]+)$ index.php?collection=$1 [QSA,L]
+RewriteRule ^~([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_-]+)$ index.php?collection=$1&bthree=$2
+RewriteRule ^~([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?collection=$1&bthree=$2&cthree=$3
+
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.php [L] 
+# For enable index
+
+RewriteRule ^(.*)/$ https://themornstar.com/$1 [R,L]
